@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="TP10">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TP10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TP10-packages.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
