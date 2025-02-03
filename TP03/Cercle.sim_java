@@ -1,0 +1,32 @@
+File Cercle.java: 478 tokens, 191 lines
+Total input: 1 file (1 new, 0 old), 478 tokens
+
+Cercle.java: line 22-33 [24]
+Cercle.java: line 44-56
+<         this.rayon = rayon;
+<         this.centre = centre;
+<         this.couleur = Color.BLUE;
+<     }
+< 
+<     /**
+<      * Constructeur pour créer un cercle à partir de deux points diamétralement opposés.
+<      *
+<      * @param p1 Le premier point.
+<      * @param p2 Le deuxième point.
+<      */
+<     public Cercle(Point p1, Point p2) {
+---
+>         this.centre = centre;
+>         this.rayon = rayon;
+>         this.couleur = Color.BLUE;
+>     }
+> 
+>     /**
+>      * Constructeur pour créer un cercle à partir de deux points diamétralement opposés et d'une couleur.
+>      *
+>      * @param p1      Le premier point.
+>      * @param p2      Le deuxième point.
+>      * @param couleur La couleur du cercle.
+>      */
+>     public Cercle(Point p1, Point p2, Color couleur) {
+

@@ -1,0 +1,63 @@
+Running RobustesseCercleTest...
+JUnit version 4.13.2
+....................
+Time: 0,057
+
+OK (20 tests)
+
+
+Running SujetCercleTest...
+JUnit version 4.13.2
+....E..........
+Time: 0,066
+There was 1 failure:
+1) testerE18(SujetCercleTest)
+java.lang.AssertionError: E18 : erreur si translation du centre (x) expected:<1.0> but was:<11.0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at SujetCercleTest.memesCoordonnees(SujetCercleTest.java:40)
+	at SujetCercleTest.testerE18(SujetCercleTest.java:127)
+
+FAILURES!!!
+Tests run: 14,  Failures: 1
+
+
+Running FormeCercleTest...
+JUnit version 4.13.2
+..E..........
+Time: 0,049
+There was 1 failure:
+1) testerC12(FormeCercleTest)
+java.lang.AssertionError: PI : Pourquoi pas public ?
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at FormeCercleTest.verifierConstanteClasse(FormeCercleTest.java:67)
+	at FormeCercleTest.testerC12(FormeCercleTest.java:79)
+
+FAILURES!!!
+Tests run: 12,  Failures: 1
+
+
+Running CercleTest...
+JUnit version 4.13.2
+.......
+Time: 0,044
+
+OK (7 tests)
+
+
+Running ComplementsCercleTest...
+JUnit version 4.13.2
+.....
+Time: 0,063
+
+OK (5 tests)
+
+
+============================================================
+Nombres de tests : 5.
+Tests en erreurs : 2
+Erreurs : SujetCercleTest FormeCercleTest
+============================================================
+

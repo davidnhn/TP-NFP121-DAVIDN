@@ -1,0 +1,31 @@
+TP03:
+
+- Voir les erreurs dans les tests
+- Des redondances à eviter. Voir Cercle.sim_java
+
+
+TP05:
+
+- OK
+
+TP06:
+
+- Vous pouvez renommer TestPolymorphisme en ExemplePolymorphisme
+- Important de comprendre si son code est OK/KO...
+
+TP07:
+
+- la couleur peut être factorisée dans ElementGraphique (ce qui justifie d'en
+  faire une classe abstraite) !
+- Il faut alors supprimer couleur, getCouleur, setCouleur de Point, etc.
+
+TP09 :
+
+- Cellule :
+	+ Le constructeur devrait avoir aussi la suivante en paramètre
+
+- EnsembleOrdonneChaine :
+	+ Pourquoi redéfinir cardinale, taille, etc.
+
+- GroupeAgenda :
+	+ non fait
