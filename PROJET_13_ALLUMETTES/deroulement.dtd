@@ -1,0 +1,7 @@
+<!ELEMENT partie (coup*, vainqueur?, tricheur?)>
+<!ELEMENT coup (joueur, prise)>
+<!ATTLIST coup numero CDATA #REQUIRED>
+<!ELEMENT joueur (#PCDATA)>
+<!ELEMENT prise (#PCDATA)>
+<!ELEMENT vainqueur (#PCDATA)>
+<!ELEMENT tricheur (#PCDATA)>

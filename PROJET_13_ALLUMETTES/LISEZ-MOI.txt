@@ -1,0 +1,150 @@
+--------------------------------------------------------------------------------
+Nom       : NAHON
+Prénom    : David
+--------------------------------------------------------------------------------
+
+Consigne : Dans ce fichier, les « ... » indiquent les endroits à compléter.
+Il s'agit de remplacer les « ... » par votre texte.  Merci de laisser une
+ligne blanche avant.  Le texte déjà écrit doit être conservé !
+
+
+=====[ Temps passé ]============================================================
+
+Ces informations de temps sont demandées à titre indicatif et ne sont pas
+prises en compte dans la notation du projet.
+Il faut remplacer les ... par des nombres.
+
+
+* Temps passé sur la V1 : 40 heures 00 minutes
+* Temps passé sur la V2 : ... heures ... minutes
+
+Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
+
+
+=====[ Questions ]==============================================================
+
+--------------------------------------------------------------------------------
+Pourquoi l'exception OperationInterditeException ne peut pas être définie
+comme vérifiée par le compilateur ?
+--------------------------------------------------------------------------------
+
+L'exception OperationInterditeException ne peut pas être définie comme vérifiée par le compilateur car elle est utilisée pour détecter des tentatives de triche pendant l'exécution du programme. Si elle était vérifiée, cela obligerait à déclarer explicitement cette exception dans la signature de toutes les méthodes qui pourraient potentiellement tricher, ce qui n'aurait pas de sens car la triche n'est pas un comportement normal attendu du programme. De plus, cela rendrait le code plus complexe et moins lisible. En tant qu'exception non vérifiée (RuntimeException), elle peut être propagée naturellement jusqu'à l'arbitre qui pourra la gérer de manière appropriée.
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qu'il faut faire pour ajouter un nouveau niveau de jeu, par
+exemple la stratégie lente (C13).  Pour plus de précision, on numérotera
+les étapes à faire.
+--------------------------------------------------------------------------------
+
+Pour ajouter un nouveau niveau de jeu comme la stratégie lente, voici les étapes à suivre :
+
+1. Créer une nouvelle classe qui implémente l'interface Strategie, par exemple StrategieLente.java
+2. Implémenter la méthode getPrise(Jeu jeu) selon la logique de la stratégie lente (prendre le minimum d'allumettes possible)
+3. Ajouter un nouveau cas dans la méthode creerStrategie de la classe Jouer pour gérer la nouvelle stratégie
+4. Mettre à jour la documentation (Javadoc) de la nouvelle classe
+5. Créer une classe de test unitaire pour la nouvelle stratégie (par exemple StrategieLenteTest.java)
+
+
+La conception actuelle du programme permet d'ajouter facilement de nouvelles stratégies grâce à l'utilisation du pattern Strategy et de l'interface Strategie.
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qui permet, dans votre conception, de changer dynamiquement
+(en cours d'exécution du programme) la stratégie d'un joueur (C14).
+--------------------------------------------------------------------------------
+
+La conception actuelle permet de changer dynamiquement la stratégie d'un joueur grâce à la méthode setStrategie(Strategie strategie) dans la classe Joueur. Cette méthode permet de modifier la stratégie utilisée par un joueur à tout moment pendant l'exécution du programme. Le pattern Strategy utilisé dans l'implémentation permet cette flexibilité car :
+
+1. L'interface Strategie définit un contrat unique (getPrise) que toutes les stratégies doivent respecter
+2. La classe Joueur délègue le choix du nombre d'allumettes à prendre à sa stratégie courante
+3. La méthode setStrategie permet de changer cette stratégie à la volée
+
+Bien que cette fonctionnalité soit implémentée, elle n'est pas utilisée dans le code actuel car il n'y a pas de mécanisme pour demander à l'utilisateur de changer de stratégie pendant la partie.
+
+
+--------------------------------------------------------------------------------
+Est-ce que l'arbitre peut détecter une triche quand la stratégie du joueur
+est swing ? Pourquoi ?
+--------------------------------------------------------------------------------
+
+Oui, l'arbitre peut détecter une triche quand la stratégie du joueur est swing. En effet, la stratégie swing utilise deux méthodes pour tricher :
+
+1. En mode non confiant, elle tente de retirer directement des allumettes via la méthode retirer() du jeu, ce qui déclenche une OperationInterditeException car le jeu est protégé par une procuration.
+
+2. En mode confiant, elle utilise la réflexion Java pour modifier directement le champ nbAllumettes du jeu. Cependant, cette triche est détectable car :
+   - Elle modifie le nombre d'allumettes sans passer par les méthodes officielles
+   - Elle laisse des traces dans les logs avec les messages "[Je triche...]"
+   - L'arbitre peut comparer le nombre d'allumettes avant et après le coup
+
+La détection est donc possible grâce au mécanisme de procuration et à la vérification des modifications non autorisées de l'état du jeu.
+
+
+--------------------------------------------------------------------------------
+Expliquer comment fonctionne la stratégie supertricheur.
+--------------------------------------------------------------------------------
+
+La stratégie supertricheur fonctionne en utilisant la réflexion Java pour contourner les mécanismes de protection du jeu. Voici son fonctionnement détaillé :
+
+1. Elle commence par afficher un message "[Je super triche...]" pour indiquer son action.
+
+2. Elle utilise la réflexion Java pour :
+   - Détecter si le jeu est une procuration (mode non confiant)
+   - Si c'est le cas, elle accède directement au champ privé "jeuReel" de la procuration pour obtenir le jeu réel
+   - Une fois le jeu réel obtenu, elle accède au champ privé "nbAllumettes" de JeuSimple
+
+3. Elle modifie directement le nombre d'allumettes pour laisser exactement 2 allumettes.
+
+4. Enfin, elle retourne 1 comme prise normale pour masquer sa triche pour ne laisser qu'une allumette à son adversaire, ce qui est une position gagnante.
+
+
+
+
+--------------------------------------------------------------------------------
+Indiquer les points qui ont été les plus difficiles à traiter et pourquoi.
+--------------------------------------------------------------------------------
+
+Les points les plus difficiles à traiter dans ce projet ont été :
+
+1. La gestion de la triche et des mécanismes de protection :
+   - Comprendre et implémenter le pattern Proxy avec la classe Procuration
+   - Gérer les différentes stratégies de triche (tricheur, supertricheur)
+   - Assurer la détection de triche en mode non confiant
+
+2. La synchronisation des threads dans l'interface Swing :
+   - Gérer l'attente du choix de l'utilisateur sans bloquer le thread principal
+   - Assurer la fermeture propre de l'interface
+   - Gérer les interactions entre l'interface graphique et le jeu
+
+3. La réflexion Java dans la stratégie supertricheur :
+   - Comprendre et utiliser correctement l'API de réflexion
+   - Gérer les exceptions liées à l'accès aux champs privés
+
+Ces points ont été difficiles car ils nécessitaient une bonne compréhension des concepts avancés de Java (threads, réflexion, patterns de conception) et une attention particulière aux détails d'implémentation.
+
+
+=====[ Explications ]===========================================================
+
+--------------------------------------------------------------------------------
+Donner ici les explications supplémentaires utiles à la compréhension du
+travail rendu.
+--------------------------------------------------------------------------------
+
+Pour une meilleure compréhension du projet, voici quelques points importants :
+
+1. Architecture du projet :
+   - Utilisation du pattern Strategy pour les différentes stratégies de jeu
+   - Pattern Proxy pour la protection contre la triche
+   - Gestion des événements Swing avec des ActionListener
+
+2. Gestion des exceptions :
+   - OperationInterditeException pour détecter les tentatives de triche
+   - CoupInvalideException pour les coups non valides
+   - ConfigurationException pour les erreurs de configuration
+
+3. Points d'attention :
+   - La stratégie swing nécessite Java Swing pour fonctionner
+   - Le mode non confiant est activé par défaut pour la sécurité
+
+
+--------------------------------------------------------------------------------

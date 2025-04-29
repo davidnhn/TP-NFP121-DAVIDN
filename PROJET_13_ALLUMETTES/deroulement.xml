@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE partie SYSTEM "deroulement.dtd">
+<partie>
+  <coup numero="1">
+    <joueur>Ordinateur</joueur>
+    <prise>3</prise>
+  </coup>
+  <tricheur>Tricheur</tricheur>
+</partie>
