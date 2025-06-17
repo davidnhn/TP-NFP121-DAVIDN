@@ -2,8 +2,28 @@
 <!DOCTYPE partie SYSTEM "deroulement.dtd">
 <partie>
   <coup numero="1">
+    <joueur>Xavier</joueur>
+    <prise>2</prise>
+  </coup>
+  <coup numero="2">
     <joueur>Ordinateur</joueur>
     <prise>3</prise>
   </coup>
-  <tricheur>Tricheur</tricheur>
+  <coup numero="3">
+    <joueur>Xavier</joueur>
+    <prise>3</prise>
+  </coup>
+  <coup numero="4">
+    <joueur>Ordinateur</joueur>
+    <prise>3</prise>
+  </coup>
+  <coup numero="5">
+    <joueur>Xavier</joueur>
+    <prise>1</prise>
+  </coup>
+  <coup numero="6">
+    <joueur>Ordinateur</joueur>
+    <prise>1</prise>
+  </coup>
+  <vainqueur>Xavier</vainqueur>
 </partie>
