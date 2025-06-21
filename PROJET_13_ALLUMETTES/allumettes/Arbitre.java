@@ -24,6 +24,15 @@ public class Arbitre {
     private int numeroCoup;
 
     /**
+     * Constructeur de l'arbitre en mode non confiant par défaut.
+     * @param joueur1 le premier joueur
+     * @param joueur2 le second joueur
+     */
+    public Arbitre(Joueur joueur1, Joueur joueur2) {
+        this(joueur1, joueur2, false);
+    }
+
+    /**
      * Constructeur de l'arbitre.
      * @param joueur1 le premier joueur
      * @param joueur2 le second joueur

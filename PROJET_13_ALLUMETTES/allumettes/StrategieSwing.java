@@ -260,7 +260,7 @@ public class StrategieSwing implements Strategie {
                         champ.setAccessible(true);
                         int valeurActuelle = (int) champ.get(jeu);
                         champ.set(jeu, valeurActuelle + 1);
-                        } catch (Exception e) {
+                        } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
                             System.out.println("Échec de l'ajout d'allumette par triche !");
                         }
                 } else {

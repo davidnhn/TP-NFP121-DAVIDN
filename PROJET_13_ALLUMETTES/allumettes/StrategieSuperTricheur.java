@@ -31,7 +31,7 @@ public class StrategieSuperTricheur implements Strategie {
                     System.out.println("[Allumettes restantes : 2]");
                 }
             }
-        } catch (Exception e) {
+        } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
             System.out.println("[La super triche a échoué]");
         }
         

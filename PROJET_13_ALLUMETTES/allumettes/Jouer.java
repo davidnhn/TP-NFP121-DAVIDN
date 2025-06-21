@@ -28,12 +28,15 @@ public class Jouer {
 			boolean confiant = false;
 			String[] parametresJoueurs;
 			
-			if (args[0].equals("-confiant")) {
-				confiant = true;
-				parametresJoueurs = new String[]{args[1], args[2]};
-			} else {
-				parametresJoueurs = new String[]{args[0], args[1]};
+					if (args[0].equals("-confiant")) {
+			confiant = true;
+			if (args.length < 3) {
+				throw new ConfigurationException("Pas assez d'arguments après -confiant");
 			}
+			parametresJoueurs = new String[]{args[1], args[2]};
+		} else {
+			parametresJoueurs = new String[]{args[0], args[1]};
+		}
 			
 			Jeu jeu = new JeuSimple(NB_ALLUMETTES_INITIAL);
 			
@@ -124,6 +127,15 @@ public class Jouer {
 		
 		String nom = parties[0];
 		String nomStrategie = parties[1];
+		
+		if (nom == null || nom.trim().isEmpty()) {
+			throw new ConfigurationException("Le nom du joueur ne peut pas être vide dans " + parametreJoueur);
+		}
+		
+		if (nomStrategie == null || nomStrategie.trim().isEmpty()) {
+			throw new ConfigurationException("La stratégie ne peut pas être vide dans " + parametreJoueur);
+		}
+		
 		Strategie strategie = creerStrategie(nomStrategie, scanner);
 		
 		return new Joueur(nom, strategie);
