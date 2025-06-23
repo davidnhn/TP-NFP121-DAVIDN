@@ -93,12 +93,21 @@ Usage :
 ================================================================================
 > java allumettes.Jouer.main("@humain", "ordi@rapide")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException
+
+Erreur : Le nom du joueur ne peut pas être vide dans @humain
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("xxx@xyz", "yyy@rapide")
 --------------------------------------------------------------------------------
@@ -174,12 +183,21 @@ Usage :
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "@humain", "ordi@rapide")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException
+
+Erreur : Le nom du joueur ne peut pas être vide dans @humain
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("xxx@rapide@naif", "yyy@rapide")
 --------------------------------------------------------------------------------
@@ -273,12 +291,21 @@ Usage :
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "-confiant")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+
+Erreur : Pas assez d'arguments après -confiant
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main()
 --------------------------------------------------------------------------------
@@ -336,12 +363,21 @@ Usage :
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "ordi@rapide", "@humain")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException
+
+Erreur : Le nom du joueur ne peut pas être vide dans @humain
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("yyy@rapide", "xxx@rapide@naif")
 --------------------------------------------------------------------------------
@@ -381,125 +417,23 @@ Usage :
 ================================================================================
 > java allumettes.Jouer.main("ordi@rapide", "@humain")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException
+
+Erreur : Le nom du joueur ne peut pas être vide dans @humain
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E
 
-Time: 0,143
-There were 5 failures:
-1) testerNomNonDefini(RobustesseTest)
-java.lang.NullPointerException
-	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
-	at java.base/java.lang.SecurityManager.checkWrite(SecurityManager.java:752)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:225)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:126)
-	at java.base/java.io.FileWriter.<init>(FileWriter.java:66)
-	at allumettes.Arbitre.<init>(Arbitre.java:39)
-	at allumettes.Jouer.main(Jouer.java:45)
-	at RobustesseTest.runJouer(RobustesseTest.java:97)
-	at RobustesseTest.testerNomNonDefini(RobustesseTest.java:154)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-2) testerNomNonDefiniConfiant(RobustesseTest)
-java.lang.NullPointerException
-	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
-	at java.base/java.lang.SecurityManager.checkWrite(SecurityManager.java:752)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:225)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:126)
-	at java.base/java.io.FileWriter.<init>(FileWriter.java:66)
-	at allumettes.Arbitre.<init>(Arbitre.java:39)
-	at allumettes.Jouer.main(Jouer.java:45)
-	at RobustesseTest.runJouer(RobustesseTest.java:97)
-	at RobustesseTest.testerNomNonDefiniConfiant(RobustesseTest.java:148)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-3) testerDoubleConfiantConfiant(RobustesseTest)
-java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
-	at allumettes.Jouer.main(Jouer.java:33)
-	at RobustesseTest.runJouer(RobustesseTest.java:97)
-	at RobustesseTest.testerDoubleConfiantConfiant(RobustesseTest.java:136)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-4) testerNomNonDefiniSymetrieConfiant(RobustesseTest)
-java.lang.NullPointerException
-	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
-	at java.base/java.lang.SecurityManager.checkWrite(SecurityManager.java:752)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:225)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:126)
-	at java.base/java.io.FileWriter.<init>(FileWriter.java:66)
-	at allumettes.Arbitre.<init>(Arbitre.java:39)
-	at allumettes.Jouer.main(Jouer.java:45)
-	at RobustesseTest.runJouer(RobustesseTest.java:97)
-	at RobustesseTest.testerNomNonDefiniSymetrieConfiant(RobustesseTest.java:160)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-5) testerNomNonDefiniSymetrie(RobustesseTest)
-java.lang.NullPointerException
-	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
-	at java.base/java.lang.SecurityManager.checkWrite(SecurityManager.java:752)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:225)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:126)
-	at java.base/java.io.FileWriter.<init>(FileWriter.java:66)
-	at allumettes.Arbitre.<init>(Arbitre.java:39)
-	at allumettes.Jouer.main(Jouer.java:45)
-	at RobustesseTest.runJouer(RobustesseTest.java:97)
-	at RobustesseTest.testerNomNonDefiniSymetrie(RobustesseTest.java:166)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:829)
 
-FAILURES!!!
-Tests run: 25,  Failures: 5
+Time: 0,084
+
+OK (25 tests)
 

@@ -1,4 +1,4 @@
-File allumettes/Arbitre.java: 667 tokens, 156 lines (not NL-terminated)
+File allumettes/Arbitre.java: 686 tokens, 165 lines (not NL-terminated)
 File allumettes/JeuSimple.java: 113 tokens, 38 lines (not NL-terminated)
 File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
 File allumettes/Joueur.java: 77 tokens, 49 lines (not NL-terminated)
@@ -6,16 +6,16 @@ File allumettes/OperationInterditeException.java: 21 tokens, 16 lines (not NL-te
 File allumettes/StrategieHumain.java: 164 tokens, 52 lines (not NL-terminated)
 File allumettes/StrategieRapide.java: 35 tokens, 13 lines (not NL-terminated)
 File allumettes/ConfigurationException.java: 21 tokens, 16 lines
-File allumettes/Jouer.java: 650 tokens, 178 lines
+File allumettes/Jouer.java: 722 tokens, 190 lines
 File allumettes/Jeu.java: 23 tokens, 21 lines
-File allumettes/StrategieSuperTricheur.java: 145 tokens, 41 lines (not NL-terminated)
+File allumettes/StrategieSuperTricheur.java: 153 tokens, 41 lines (not NL-terminated)
 File allumettes/StrategieExpert.java: 81 tokens, 30 lines (not NL-terminated)
 File allumettes/Procuration.java: 59 tokens, 30 lines (not NL-terminated)
 File allumettes/StrategieNaif.java: 68 tokens, 27 lines (not NL-terminated)
 File allumettes/Strategie.java: 13 tokens, 15 lines (not NL-terminated)
 File allumettes/StrategieTricheur.java: 110 tokens, 36 lines (not NL-terminated)
-File allumettes/StrategieSwing.java: 1098 tokens, 287 lines (not NL-terminated)
-Total input: 17 files (17 new, 0 old), 3413 tokens
+File allumettes/StrategieSwing.java: 1106 tokens, 287 lines (not NL-terminated)
+Total input: 17 files (17 new, 0 old), 3520 tokens
 
 allumettes/StrategieSwing.java: line 112-123 [46]
 allumettes/StrategieSwing.java: line 126-137
@@ -45,8 +45,8 @@ allumettes/StrategieSwing.java: line 126-137
 >             @Override
 >             public void actionPerformed(ActionEvent e) {
 
-allumettes/Arbitre.java: line 71-76 [45]
-allumettes/Arbitre.java: line 79-83
+allumettes/Arbitre.java: line 80-85 [45]
+allumettes/Arbitre.java: line 88-92
 <             ecrireXML("vainqueur", gagnant.getNom());
 <             this.xmlWriter.write("</partie>\n");
 <             this.xmlWriter.close();
@@ -59,6 +59,16 @@ allumettes/Arbitre.java: line 79-83
 >                 this.xmlWriter.close();
 >             } catch (IOException ex) {
 >                 System.err.println("Erreur lors de l'écriture du fichier XML : " + ex.getMessage());
+
+allumettes/Jouer.java: line 131-133 [28]
+allumettes/Jouer.java: line 135-137
+< 		if (nom == null || nom.trim().isEmpty()) {
+< 			throw new ConfigurationException("Le nom du joueur ne peut pas être vide dans " + parametreJoueur);
+< 		}
+---
+> 		if (nomStrategie == null || nomStrategie.trim().isEmpty()) {
+> 			throw new ConfigurationException("La stratégie ne peut pas être vide dans " + parametreJoueur);
+> 		}
 
 allumettes/StrategieSuperTricheur.java: line 1-15 [28]
 allumettes/StrategieTricheur.java: line 1-12
@@ -109,6 +119,28 @@ allumettes/StrategieSwing.java: line 131-137
 >             @Override
 >             public void actionPerformed(ActionEvent e) {
 
+allumettes/StrategieSuperTricheur.java: line 17-19 [24]
+allumettes/StrategieSuperTricheur.java: line 25-27
+<             if (jeu instanceof Procuration) {
+<                 Field champJeuReel = Procuration.class.getDeclaredField("jeuReel");
+<                 champJeuReel.setAccessible(true);
+---
+>             if (jeuReel instanceof JeuSimple) {
+>                 Field champNbAllumettes = JeuSimple.class.getDeclaredField("nbAllumettes");
+>                 champNbAllumettes.setAccessible(true);
+
+allumettes/Jouer.java: line 176-179 [24]
+allumettes/Jouer.java: line 180-183
+< 			java.io.FileWriter dtdWriter = new java.io.FileWriter("deroulement.dtd");
+< 			dtdWriter.write("<!ELEMENT partie (coup*, vainqueur?, tricheur?)>\n");
+< 			dtdWriter.write("<!ELEMENT coup (joueur, prise)>\n");
+< 			dtdWriter.write("<!ATTLIST coup numero CDATA #REQUIRED>\n");
+---
+> 			dtdWriter.write("<!ELEMENT joueur (#PCDATA)>\n");
+> 			dtdWriter.write("<!ELEMENT prise (#PCDATA)>\n");
+> 			dtdWriter.write("<!ELEMENT vainqueur (#PCDATA)>\n");
+> 			dtdWriter.write("<!ELEMENT tricheur (#PCDATA)>\n");
+
 allumettes/StrategieSwing.java: line 99-103 [24]
 allumettes/StrategieSwing.java: line 104-108
 <         panel.add(panneauTriche, c);
@@ -123,8 +155,16 @@ allumettes/StrategieSwing.java: line 104-108
 >         c.weightx = 1.0;
 >         c.weighty = 0;
 
-allumettes/Jouer.java: line 141-147 [24]
-allumettes/Jouer.java: line 147-153
+allumettes/Arbitre.java: line 112-113 [24]
+allumettes/StrategieHumain.java: line 31-32
+<                 if (joueur.getNom().toLowerCase().contains("humain")) {
+<                     System.out.print(joueur.getNom() + ", combien d'allumettes ? ");
+---
+>                 if (entree.trim().toLowerCase().equals("triche")) {
+>                     System.out.println("[Une allumette en moins, plus que " + 
+
+allumettes/Jouer.java: line 153-159 [24]
+allumettes/Jouer.java: line 159-165
 < 				return new StrategieHumain(scanner);
 < 			case "naif":
 < 				return new StrategieNaif();
@@ -141,38 +181,18 @@ allumettes/Jouer.java: line 147-153
 > 			case "supertricheur":
 > 				return new StrategieSuperTricheur();
 
-allumettes/StrategieSuperTricheur.java: line 17-19 [24]
-allumettes/StrategieSuperTricheur.java: line 25-27
-<             if (jeu instanceof Procuration) {
-<                 Field champJeuReel = Procuration.class.getDeclaredField("jeuReel");
-<                 champJeuReel.setAccessible(true);
+allumettes/StrategieSuperTricheur.java: line 34-36 [24]
+allumettes/StrategieSwing.java: line 263-265
+<         } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
+<             System.out.println("[La super triche a échoué]");
+<         }
 ---
->             if (jeuReel instanceof JeuSimple) {
->                 Field champNbAllumettes = JeuSimple.class.getDeclaredField("nbAllumettes");
->                 champNbAllumettes.setAccessible(true);
+>                         } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
+>                             System.out.println("Échec de l'ajout d'allumette par triche !");
+>                         }
 
-allumettes/Arbitre.java: line 103-104 [24]
-allumettes/StrategieHumain.java: line 31-32
-<                 if (joueur.getNom().toLowerCase().contains("humain")) {
-<                     System.out.print(joueur.getNom() + ", combien d'allumettes ? ");
----
->                 if (entree.trim().toLowerCase().equals("triche")) {
->                     System.out.println("[Une allumette en moins, plus que " + 
-
-allumettes/Jouer.java: line 164-167 [24]
-allumettes/Jouer.java: line 168-171
-< 			java.io.FileWriter dtdWriter = new java.io.FileWriter("deroulement.dtd");
-< 			dtdWriter.write("<!ELEMENT partie (coup*, vainqueur?, tricheur?)>\n");
-< 			dtdWriter.write("<!ELEMENT coup (joueur, prise)>\n");
-< 			dtdWriter.write("<!ATTLIST coup numero CDATA #REQUIRED>\n");
----
-> 			dtdWriter.write("<!ELEMENT joueur (#PCDATA)>\n");
-> 			dtdWriter.write("<!ELEMENT prise (#PCDATA)>\n");
-> 			dtdWriter.write("<!ELEMENT vainqueur (#PCDATA)>\n");
-> 			dtdWriter.write("<!ELEMENT tricheur (#PCDATA)>\n");
-
-allumettes/Arbitre.java: line 42-46 [24]
-allumettes/Arbitre.java: line 81-85
+allumettes/Arbitre.java: line 51-55 [24]
+allumettes/Arbitre.java: line 90-94
 <             this.xmlWriter.write("<partie>\n");
 <         } catch (IOException e) {
 <             System.err.println("Erreur lors de la création du fichier XML : " + e.getMessage());
