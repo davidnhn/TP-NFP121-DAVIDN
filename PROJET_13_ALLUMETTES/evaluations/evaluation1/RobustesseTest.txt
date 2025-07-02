@@ -3,437 +3,217 @@ JUnit version 4.12
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "x", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour x
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@rapide@naif")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@rapide@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("x", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour x
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@xyz")
 --------------------------------------------------------------------------------
-
-Erreur : Stratégie inconnue : xyz
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("yyy@rapide", "xxx@ville@naif")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@ville@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("@humain", "ordi@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Le nom du joueur ne peut pas être vide dans @humain
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("xxx@xyz", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Stratégie inconnue : xyz
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "xxx@rapide@naif", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@rapide@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-..
+E.E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@ville@naif")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@ville@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("yyy@rapide", "xxx@xyz")
 --------------------------------------------------------------------------------
-
-Erreur : Stratégie inconnue : xyz
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "@humain", "ordi@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Le nom du joueur ne peut pas être vide dans @humain
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("xxx@rapide@naif", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@rapide@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant")
 --------------------------------------------------------------------------------
-
-Erreur : Trop peu d'arguments : 1
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "xxx@ville@naif", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@ville@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("xxx@ville@naif", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@ville@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("yyy@rapide", "x")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour x
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "-confiant")
 --------------------------------------------------------------------------------
-
-Erreur : Pas assez d'arguments après -confiant
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main()
 --------------------------------------------------------------------------------
-
-Erreur : Trop peu d'arguments : 0
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "yyy@rapide", "x")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour x
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "xxx@xyz", "yyy@rapide")
 --------------------------------------------------------------------------------
-
-Erreur : Stratégie inconnue : xyz
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "ordi@rapide", "@humain")
 --------------------------------------------------------------------------------
-
-Erreur : Le nom du joueur ne peut pas être vide dans @humain
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("yyy@rapide", "xxx@rapide@naif")
 --------------------------------------------------------------------------------
-
-Erreur : Format invalide pour xxx@rapide@naif
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant")
 --------------------------------------------------------------------------------
-
-Erreur : Trop peu d'arguments : 1
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-.
+E.
 ================================================================================
 > java allumettes.Jouer.main("ordi@rapide", "@humain")
 --------------------------------------------------------------------------------
-
-Erreur : Le nom du joueur ne peut pas être vide dans @humain
-
-Usage :
-	java allumettes.Jouer joueur1 joueur2
-		joueur est de la forme nom@stratégie
-		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
-
-	Exemple :
-		java allumettes.Jouer Xavier@humain Ordinateur@naif
-
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 --------------------------------------------------------------------------------
 
 
-
-
-Time: 0,084
-
-OK (25 tests)
+E
 

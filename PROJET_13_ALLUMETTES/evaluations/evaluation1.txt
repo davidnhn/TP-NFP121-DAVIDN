@@ -1,4 +1,4 @@
-Date de l'évaluation : lun. 23 juin 2025 17:00:49 CEST
+Date de l'évaluation : mer. 02 juil. 2025 07:12:40 CEST
 
 LISEZ-MOI.txt : SUPPRIMÉ
 
@@ -77,17 +77,61 @@ Test exempleMaxLou : ok
 Test exempleRapideRapide : ok
 Test exempleTricheurExpert : ok
 
-Test RobustesseTest : OK (25 tests)	(voir evaluation1/RobustesseTest.txt)
+Test RobustesseTest : WARNING: A command line option has enabled the Security Manager
+WARNING: The Security Manager is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by RobustesseTest (file:/home/cregut/hpxc/cregut.svn.enseeiht.fr/2024/1sn/tob/admin/pc/evaluation1/tests.jar)
+WARNING: Please consider reporting this to the maintainers of RobustesseTest
+WARNING: System::setSecurityManager will be removed in a future release
+Exception in thread "main" java.lang.ExceptionInInitializerError
+	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:963)
+	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:478)
+	at org.junit.internal.TextListener.elapsedTimeAsString(TextListener.java:99)
+	at org.junit.internal.TextListener.printHeader(TextListener.java:56)
+	at org.junit.internal.TextListener.testRunFinished(TextListener.java:26)
+	at org.junit.runner.notification.SynchronizedRunListener.testRunFinished(SynchronizedRunListener.java:42)
+	at org.junit.runner.notification.RunNotifier$2.notifyListener(RunNotifier.java:103)
+	at org.junit.runner.notification.RunNotifier$SafeNotifier.run(RunNotifier.java:72)
+	at org.junit.runner.notification.RunNotifier.fireTestRunFinished(RunNotifier.java:100)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
+	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
+	at java.base/java.lang.SecurityManager.checkPropertyAccess(SecurityManager.java:1146)
+	at java.base/java.lang.System.getProperty(System.java:967)
+	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:89)
+	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:54)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+	at java.base/sun.security.action.GetPropertyAction.privilegedGetProperty(GetPropertyAction.java:110)
+	at java.base/sun.util.locale.provider.LocaleProviderAdapter.<clinit>(LocaleProviderAdapter.java:124)
+	... 13 more
+Le test ne se termine pas !	(voir evaluation1/RobustesseTest.txt)
+
 
 On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
 Test exemplePresqueSujet : ok
 
 Vérification du respect du diagramme de classe...
-Test FormeC7Test : OK (1 test)	(voir evaluation1/FormeC7Test.txt)
-Test FormeC9Test : OK (1 test)	(voir evaluation1/FormeC9Test.txt)
-Test FormeC14Test : OK (1 test)	(voir evaluation1/FormeC14Test.txt)
-Test FormeExceptionsTest : OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
-Test FormeProxyTest : OK (2 tests)	(voir evaluation1/FormeProxyTest.txt)
+Test FormeC7Test : WARNING: A command line option has enabled the Security Manager
+WARNING: The Security Manager is deprecated and will be removed in a future release
+OK (1 test)	(voir evaluation1/FormeC7Test.txt)
+Test FormeC9Test : WARNING: A command line option has enabled the Security Manager
+WARNING: The Security Manager is deprecated and will be removed in a future release
+OK (1 test)	(voir evaluation1/FormeC9Test.txt)
+Test FormeC14Test : WARNING: A command line option has enabled the Security Manager
+WARNING: The Security Manager is deprecated and will be removed in a future release
+OK (1 test)	(voir evaluation1/FormeC14Test.txt)
+Test FormeExceptionsTest : WARNING: A command line option has enabled the Security Manager
+WARNING: The Security Manager is deprecated and will be removed in a future release
+OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
+Test FormeProxyTest : WARNING: A command line option has enabled the Security Manager
+WARNING: The Security Manager is deprecated and will be removed in a future release
+OK (2 tests)	(voir evaluation1/FormeProxyTest.txt)
 
 Compilation de StrategieRapideTest.java : OK.
-Test allumettes.StrategieRapideTest : OK (1 test)	(voir evaluation1/allumettes.StrategieRapideTest.txt)
+Test allumettes.StrategieRapideTest : WARNING: A command line option has enabled the Security Manager
+WARNING: The Security Manager is deprecated and will be removed in a future release
+OK (1 test)	(voir evaluation1/allumettes.StrategieRapideTest.txt)
+Tous les tests réussissent
