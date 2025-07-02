@@ -1,4 +1,4 @@
-Date de l'évaluation : mer. 02 juil. 2025 07:12:40 CEST
+Date de l'évaluation : mer. 02 juil. 2025 07:16:45 CEST
 
 LISEZ-MOI.txt : SUPPRIMÉ
 
@@ -84,7 +84,7 @@ WARNING: System::setSecurityManager has been called by RobustesseTest (file:/hom
 WARNING: Please consider reporting this to the maintainers of RobustesseTest
 WARNING: System::setSecurityManager will be removed in a future release
 Exception in thread "main" java.lang.ExceptionInInitializerError
-	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:963)
+	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:961)
 	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:478)
 	at org.junit.internal.TextListener.elapsedTimeAsString(TextListener.java:99)
 	at org.junit.internal.TextListener.printHeader(TextListener.java:56)
@@ -99,12 +99,12 @@ Exception in thread "main" java.lang.ExceptionInInitializerError
 	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
 Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
 	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
-	at java.base/java.lang.SecurityManager.checkPropertyAccess(SecurityManager.java:1146)
-	at java.base/java.lang.System.getProperty(System.java:967)
-	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:89)
-	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:54)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
-	at java.base/sun.security.action.GetPropertyAction.privilegedGetProperty(GetPropertyAction.java:110)
+	at java.base/java.lang.SecurityManager.checkPropertyAccess(SecurityManager.java:1155)
+	at java.base/java.lang.System.getProperty(System.java:931)
+	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:87)
+	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:53)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at java.base/sun.security.action.GetPropertyAction.privilegedGetProperty(GetPropertyAction.java:108)
 	at java.base/sun.util.locale.provider.LocaleProviderAdapter.<clinit>(LocaleProviderAdapter.java:124)
 	... 13 more
 Le test ne se termine pas !	(voir evaluation1/RobustesseTest.txt)

@@ -111,12 +111,21 @@ E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
+
+Erreur : Trop peu d'arguments : 1
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "xxx@ville@naif", "yyy@rapide")
 --------------------------------------------------------------------------------
@@ -147,21 +156,39 @@ E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "-confiant")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
+
+Erreur : Pas assez d'arguments après -confiant
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main()
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
+
+Erreur : Trop peu d'arguments : 0
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "yyy@rapide", "x")
 --------------------------------------------------------------------------------
@@ -201,12 +228,21 @@ E.
 ================================================================================
 > java allumettes.Jouer.main("-confiant")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
+
+Erreur : Trop peu d'arguments : 1
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur | swing | supertricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("ordi@rapide", "@humain")
 --------------------------------------------------------------------------------
