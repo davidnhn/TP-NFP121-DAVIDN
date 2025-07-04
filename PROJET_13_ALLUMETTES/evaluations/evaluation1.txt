@@ -1,4 +1,4 @@
-Date de l'évaluation : mer. 02 juil. 2025 07:21:03 CEST
+Date de l'évaluation : ven. 04 juil. 2025 22:41:21 CEST
 
 LISEZ-MOI.txt : SUPPRIMÉ
 
@@ -14,9 +14,9 @@ Procuration sur le jeu réel : allumettes/Procuration.java (ok)
 OperationInterditeException, levée dans : allumettes/Procuration.java (ok)
 OperationInterditeException : Pourquoi la récupérer dans plusieurs classes ?
   | allumettes/Arbitre.java:84:        } catch (OperationInterditeException e) {
-  | allumettes/StrategieHumain.java:37:                    } catch (CoupInvalideException | OperationInterditeException e) {
-  | allumettes/StrategieTricheur.java:29:        } catch (OperationInterditeException e) {
   | allumettes/StrategieSwing.java:274:                    } catch (OperationInterditeException e) {
+  | allumettes/StrategieTricheur.java:29:        } catch (OperationInterditeException e) {
+  | allumettes/StrategieHumain.java:37:                    } catch (CoupInvalideException | OperationInterditeException e) {
 
 
 Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
@@ -24,28 +24,28 @@ Throwable, Exception et RuntimeException ne devraient pas être récupérées ca
 AssertionError ne doit pas être récupérée... ok
 
 Autres exceptions récupérées :
+  | allumettes/StrategieSuperTricheur.java:34:        } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
   | allumettes/Arbitre.java:52:        } catch (IOException e) {
   | allumettes/Arbitre.java:91:            } catch (IOException ex) {
   | allumettes/Arbitre.java:94:        } catch (IOException e) {
   | allumettes/Arbitre.java:129:            } catch (CoupInvalideException e) {
-  | allumettes/StrategieHumain.java:44:            } catch (NumberFormatException e) {
-  | allumettes/Jouer.java:69:               } catch (InterruptedException e) {
-  | allumettes/Jouer.java:73:       } catch (ConfigurationException e) {
-  | allumettes/Jouer.java:185:      } catch (java.io.IOException e) {
-  | allumettes/StrategieSuperTricheur.java:34:        } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
-  | allumettes/StrategieTricheur.java:28:        } catch (CoupInvalideException e) {
   | allumettes/StrategieSwing.java:141:                } catch (NumberFormatException ex) {
   | allumettes/StrategieSwing.java:233:                } catch (InterruptedException e) {
   | allumettes/StrategieSwing.java:263:                        } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
   | allumettes/StrategieSwing.java:272:                    } catch (CoupInvalideException e) {
   | allumettes/StrategieSwing.java:280:            } catch (NumberFormatException e) {
+  | allumettes/StrategieTricheur.java:28:        } catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:69:               } catch (InterruptedException e) {
+  | allumettes/Jouer.java:73:       } catch (ConfigurationException e) {
+  | allumettes/Jouer.java:185:      } catch (java.io.IOException e) {
+  | allumettes/StrategieHumain.java:44:            } catch (NumberFormatException e) {
 
 Utilisation de 'Scanner' : ok
-  | allumettes/StrategieHumain.java:10:    private static Scanner scanner;
-  | allumettes/StrategieHumain.java:16:    public StrategieHumain(Scanner scanner) {
   | allumettes/Jouer.java:43:           Scanner scanner = new Scanner(System.in);
   | allumettes/Jouer.java:122:  private static Joueur creerJoueur(String parametreJoueur, Scanner scanner) {
   | allumettes/Jouer.java:150:  private static Strategie creerStrategie(String nomStrategie, Scanner scanner) {
+  | allumettes/StrategieHumain.java:10:    private static Scanner scanner;
+  | allumettes/StrategieHumain.java:16:    public StrategieHumain(Scanner scanner) {
 
 Utilisation de 'split' : ok
   | allumettes/Jouer.java:123:      String[] parties = parametreJoueur.split("@");
@@ -77,61 +77,18 @@ Test exempleMaxLou : ok
 Test exempleRapideRapide : ok
 Test exempleTricheurExpert : ok
 
-Test RobustesseTest : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-WARNING: A terminally deprecated method in java.lang.System has been called
-WARNING: System::setSecurityManager has been called by RobustesseTest (file:/home/cregut/hpxc/cregut.svn.enseeiht.fr/2024/1sn/tob/admin/pc/evaluation1/tests.jar)
-WARNING: Please consider reporting this to the maintainers of RobustesseTest
-WARNING: System::setSecurityManager will be removed in a future release
-Exception in thread "main" java.lang.ExceptionInInitializerError
-	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:961)
-	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:478)
-	at org.junit.internal.TextListener.elapsedTimeAsString(TextListener.java:99)
-	at org.junit.internal.TextListener.printHeader(TextListener.java:56)
-	at org.junit.internal.TextListener.testRunFinished(TextListener.java:26)
-	at org.junit.runner.notification.SynchronizedRunListener.testRunFinished(SynchronizedRunListener.java:42)
-	at org.junit.runner.notification.RunNotifier$2.notifyListener(RunNotifier.java:103)
-	at org.junit.runner.notification.RunNotifier$SafeNotifier.run(RunNotifier.java:72)
-	at org.junit.runner.notification.RunNotifier.fireTestRunFinished(RunNotifier.java:100)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
-	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
-Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
-	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
-	at java.base/java.lang.SecurityManager.checkPropertyAccess(SecurityManager.java:1155)
-	at java.base/java.lang.System.getProperty(System.java:931)
-	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:87)
-	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:53)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
-	at java.base/sun.security.action.GetPropertyAction.privilegedGetProperty(GetPropertyAction.java:108)
-	at java.base/sun.util.locale.provider.LocaleProviderAdapter.<clinit>(LocaleProviderAdapter.java:124)
-	... 13 more
-Le test ne se termine pas !	(voir evaluation1/RobustesseTest.txt)
-
+Test RobustesseTest : OK (25 tests)	(voir evaluation1/RobustesseTest.txt)
 
 On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
 Test exemplePresqueSujet : ok
 
 Vérification du respect du diagramme de classe...
-Test FormeC7Test : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/FormeC7Test.txt)
-Test FormeC9Test : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/FormeC9Test.txt)
-Test FormeC14Test : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/FormeC14Test.txt)
-Test FormeExceptionsTest : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
-Test FormeProxyTest : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (2 tests)	(voir evaluation1/FormeProxyTest.txt)
+Test FormeC7Test : OK (1 test)	(voir evaluation1/FormeC7Test.txt)
+Test FormeC9Test : OK (1 test)	(voir evaluation1/FormeC9Test.txt)
+Test FormeC14Test : OK (1 test)	(voir evaluation1/FormeC14Test.txt)
+Test FormeExceptionsTest : OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
+Test FormeProxyTest : OK (2 tests)	(voir evaluation1/FormeProxyTest.txt)
 
 Compilation de StrategieRapideTest.java : OK.
-Test allumettes.StrategieRapideTest : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/allumettes.StrategieRapideTest.txt)
+Test allumettes.StrategieRapideTest : OK (1 test)	(voir evaluation1/allumettes.StrategieRapideTest.txt)
 Tous les tests réussissent

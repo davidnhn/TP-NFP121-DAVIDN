@@ -1,20 +1,20 @@
-File allumettes/Arbitre.java: 686 tokens, 165 lines (not NL-terminated)
-File allumettes/JeuSimple.java: 113 tokens, 38 lines (not NL-terminated)
-File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
-File allumettes/Joueur.java: 77 tokens, 49 lines (not NL-terminated)
-File allumettes/OperationInterditeException.java: 21 tokens, 16 lines (not NL-terminated)
-File allumettes/StrategieHumain.java: 164 tokens, 52 lines (not NL-terminated)
-File allumettes/StrategieRapide.java: 35 tokens, 13 lines (not NL-terminated)
-File allumettes/ConfigurationException.java: 21 tokens, 16 lines
-File allumettes/Jouer.java: 722 tokens, 190 lines
-File allumettes/Jeu.java: 23 tokens, 21 lines
 File allumettes/StrategieSuperTricheur.java: 153 tokens, 41 lines (not NL-terminated)
-File allumettes/StrategieExpert.java: 81 tokens, 30 lines (not NL-terminated)
-File allumettes/Procuration.java: 59 tokens, 30 lines (not NL-terminated)
 File allumettes/StrategieNaif.java: 68 tokens, 27 lines (not NL-terminated)
-File allumettes/Strategie.java: 13 tokens, 15 lines (not NL-terminated)
-File allumettes/StrategieTricheur.java: 110 tokens, 36 lines (not NL-terminated)
+File allumettes/StrategieRapide.java: 35 tokens, 13 lines (not NL-terminated)
+File allumettes/Arbitre.java: 686 tokens, 165 lines (not NL-terminated)
 File allumettes/StrategieSwing.java: 1106 tokens, 287 lines (not NL-terminated)
+File allumettes/StrategieTricheur.java: 110 tokens, 36 lines (not NL-terminated)
+File allumettes/Jouer.java: 722 tokens, 190 lines
+File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
+File allumettes/StrategieHumain.java: 164 tokens, 52 lines (not NL-terminated)
+File allumettes/Jeu.java: 23 tokens, 21 lines
+File allumettes/Procuration.java: 59 tokens, 30 lines (not NL-terminated)
+File allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File allumettes/StrategieExpert.java: 81 tokens, 30 lines (not NL-terminated)
+File allumettes/Joueur.java: 77 tokens, 49 lines (not NL-terminated)
+File allumettes/Strategie.java: 13 tokens, 15 lines (not NL-terminated)
+File allumettes/OperationInterditeException.java: 21 tokens, 16 lines (not NL-terminated)
+File allumettes/JeuSimple.java: 113 tokens, 38 lines (not NL-terminated)
 Total input: 17 files (17 new, 0 old), 3520 tokens
 
 allumettes/StrategieSwing.java: line 112-123 [46]
@@ -119,16 +119,6 @@ allumettes/StrategieSwing.java: line 131-137
 >             @Override
 >             public void actionPerformed(ActionEvent e) {
 
-allumettes/StrategieSuperTricheur.java: line 17-19 [24]
-allumettes/StrategieSuperTricheur.java: line 25-27
-<             if (jeu instanceof Procuration) {
-<                 Field champJeuReel = Procuration.class.getDeclaredField("jeuReel");
-<                 champJeuReel.setAccessible(true);
----
->             if (jeuReel instanceof JeuSimple) {
->                 Field champNbAllumettes = JeuSimple.class.getDeclaredField("nbAllumettes");
->                 champNbAllumettes.setAccessible(true);
-
 allumettes/Jouer.java: line 176-179 [24]
 allumettes/Jouer.java: line 180-183
 < 			java.io.FileWriter dtdWriter = new java.io.FileWriter("deroulement.dtd");
@@ -140,6 +130,38 @@ allumettes/Jouer.java: line 180-183
 > 			dtdWriter.write("<!ELEMENT prise (#PCDATA)>\n");
 > 			dtdWriter.write("<!ELEMENT vainqueur (#PCDATA)>\n");
 > 			dtdWriter.write("<!ELEMENT tricheur (#PCDATA)>\n");
+
+allumettes/Arbitre.java: line 51-55 [24]
+allumettes/Arbitre.java: line 90-94
+<             this.xmlWriter.write("<partie>\n");
+<         } catch (IOException e) {
+<             System.err.println("Erreur lors de la création du fichier XML : " + e.getMessage());
+<         }
+<     }
+---
+>                 this.xmlWriter.close();
+>             } catch (IOException ex) {
+>                 System.err.println("Erreur lors de l'écriture du fichier XML : " + ex.getMessage());
+>             }
+>         } catch (IOException e) {
+
+allumettes/Arbitre.java: line 112-113 [24]
+allumettes/StrategieHumain.java: line 31-32
+<                 if (joueur.getNom().toLowerCase().contains("humain")) {
+<                     System.out.print(joueur.getNom() + ", combien d'allumettes ? ");
+---
+>                 if (entree.trim().toLowerCase().equals("triche")) {
+>                     System.out.println("[Une allumette en moins, plus que " + 
+
+allumettes/StrategieSuperTricheur.java: line 17-19 [24]
+allumettes/StrategieSuperTricheur.java: line 25-27
+<             if (jeu instanceof Procuration) {
+<                 Field champJeuReel = Procuration.class.getDeclaredField("jeuReel");
+<                 champJeuReel.setAccessible(true);
+---
+>             if (jeuReel instanceof JeuSimple) {
+>                 Field champNbAllumettes = JeuSimple.class.getDeclaredField("nbAllumettes");
+>                 champNbAllumettes.setAccessible(true);
 
 allumettes/StrategieSwing.java: line 99-103 [24]
 allumettes/StrategieSwing.java: line 104-108
@@ -154,14 +176,6 @@ allumettes/StrategieSwing.java: line 104-108
 >         c.gridy = 2;
 >         c.weightx = 1.0;
 >         c.weighty = 0;
-
-allumettes/Arbitre.java: line 112-113 [24]
-allumettes/StrategieHumain.java: line 31-32
-<                 if (joueur.getNom().toLowerCase().contains("humain")) {
-<                     System.out.print(joueur.getNom() + ", combien d'allumettes ? ");
----
->                 if (entree.trim().toLowerCase().equals("triche")) {
->                     System.out.println("[Une allumette en moins, plus que " + 
 
 allumettes/Jouer.java: line 153-159 [24]
 allumettes/Jouer.java: line 159-165
@@ -190,18 +204,4 @@ allumettes/StrategieSwing.java: line 263-265
 >                         } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | SecurityException | ClassCastException e) {
 >                             System.out.println("Échec de l'ajout d'allumette par triche !");
 >                         }
-
-allumettes/Arbitre.java: line 51-55 [24]
-allumettes/Arbitre.java: line 90-94
-<             this.xmlWriter.write("<partie>\n");
-<         } catch (IOException e) {
-<             System.err.println("Erreur lors de la création du fichier XML : " + e.getMessage());
-<         }
-<     }
----
->                 this.xmlWriter.close();
->             } catch (IOException ex) {
->                 System.err.println("Erreur lors de l'écriture du fichier XML : " + ex.getMessage());
->             }
->         } catch (IOException e) {
 
